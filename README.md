@@ -57,29 +57,19 @@ The same engine also runs an MLP. If the transformer is not matching by **26 Oct
 | Python / verification | | Train, int8 export, golden model, per-layer diff |
 | Synthesis / report / PPT | | Vivado numbers (LUT/FF/BRAM/DSP), tables, report, slides |
 
-## 8. Timeline
-| Dates | Work |
-|---|---|
-| 20-21 Oct | Tools installed, GCL login tested, model trained and weights exported |
-| 21-23 Oct | Golden model, matmul engine, MLP matches bit-exactly |
-| 23-26 Oct | Softmax, attention, full transformer in simulation, first Vivado synthesis |
-| 26-28 Oct | Optimizations, per-module resource numbers, scripts |
-| 28-29 Oct | Freeze, zip, submit |
-| 30 Oct-3 Nov | Demo rehearsal on GCL, PPT |
-
-## 9. Setup
+## 8. Setup
 - **Local (Linux):** `sudo apt install iverilog verilator gtkwave yosys`, `pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu`.
 - **GCL (Vivado):** `ssh -X -Y <KerberosID>@gcl1.cse.iitd.ac.in` (UG; `gcl2` for PG), then `source /opt/Xilinx/Vivado/2022.1/settings64.sh`. Collect the password in lecture or office hours. Never commit passwords.
 - Write plain standard Verilog so it behaves the same in iverilog and Vivado. Always re-check in Vivado on GCL.
 - Use the FPGA part with the **largest LUT/FF** for synthesis.
 
-## 10. Rules to remember
+## 9. Rules to remember
 - Inference only; the input is data, never a program.
 - Cite the source of every adopted idea; compare your own ideas against the baseline.
 - The report lists LUT, FF, BRAM and DSP. For a big design, synthesize per module and extrapolate.
 - For the demo, be ready to show the outputs of the **last 2 layers**.
 
-## 11. Papers (in `Research papers/`)
+## 10. Papers (in `Research papers/`)
 - `Attention_Is_All_You_Need.pdf`: the transformer.
 - `ViT_16x16_Words.pdf`: image patches as tokens, our model design.
 - `I-BERT_Integer_only.pdf`: integer-only attention, supports our bit-exact approach.
