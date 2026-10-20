@@ -23,7 +23,13 @@ One transformer block then does:
 
 About 10 matmuls plus one softmax, around 54k multiplications per image. So we build **one reusable matmul engine** and a few small units around it.
 
-Learn it: Jay Alammar "The Illustrated Transformer" (jalammar.github.io), then Karpathy "Let's build GPT" (YouTube), then section 3 of the Attention paper in `Research papers/`.
+**Learn it, in this order (about 3 hours):**
+1. [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) (Jay Alammar). Picture-based, start here.
+2. [Attention in transformers, step-by-step](https://www.3blue1brown.com/lessons/attention) (3Blue1Brown, 26 min). Intuition for Q, K, V. The video is embedded on that lesson page.
+3. [Let's build GPT: from scratch, in code, spelled out](https://www.youtube.com/watch?v=kCc8FmEb1nY) (Andrej Karpathy, about 2 h). Code along in PyTorch. He suggests his earlier "makemore" videos first if PyTorch is new to you; the series is at [karpathy.ai/zero-to-hero](https://karpathy.ai/zero-to-hero.html).
+4. Section 3 of the Attention paper, then the abstract and Figure 1 of the ViT paper, both in `Research papers/`.
+
+Note: Karpathy's video builds a text (GPT) model, ours is an image model, but the attention block is the same.
 
 ## 4. Hardware blocks
 | Block | File | Job |
