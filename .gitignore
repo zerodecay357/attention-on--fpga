@@ -1,0 +1,18 @@
+# course material (not ours to redistribute)
+GCL_Access.pdf
+Project_Details*.pdf
+Suggestions.pdf
+Vivado_tutorial.pdf
+# vivado / sim outputs
+*.jou
+*.log
+*.str
+.Xil/
+*.out
+*.vcd
+*.wdb
+xsim.dir/
+__pycache__/
+*.pyc
+# MNIST download cache
+data/
